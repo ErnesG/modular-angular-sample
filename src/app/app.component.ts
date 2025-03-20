@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/ui/header/header.component';
 import { CardComponent } from './components/ui/card/card.component';
+import { NavbarComponent } from './components/ui/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports:[HeaderComponent, CardComponent]
+  imports:[HeaderComponent, CardComponent, NavbarComponent]
 })
 export class AppComponent {
   dummyTrafficData = [
