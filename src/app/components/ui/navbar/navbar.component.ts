@@ -4,7 +4,7 @@ import { ButtonComponent } from '../button/button.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
