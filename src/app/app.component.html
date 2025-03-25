@@ -1,40 +1,8 @@
 <app-navbar/>
 <main>
   <div id="dashboard">
-    <app-card>
-      <app-header source="status.png"  title="Server Status" alt="A Signal"/>
-      <div>
-        @if (currentStatus === 'online') {
-          <p>Servers are online</p>
-          <p>All systems are operational.</p>
-        } @else if (currentStatus === 'offline') {
-          <p>Servers are offline</p>
-          <p>Functionality should be restored soon.</p>
-        } @else {
-          <p>Server status is unknown</p>
-          <p>Fetching server status failed.</p>
-        }
-      </div>
-
-    </app-card>
-    
-    <app-card>
-        <app-header alt="A globe" source="globe.png" title="Traffic"/>
-        <div id="traffic">
-          <p>Last 7 days</p>
-          <div id="chart">
-            @for (dataPoint of dummyTrafficData; track dataPoint.id) {
-              <div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>
-            }
-          </div>
-        </div>
-    </app-card>
-
-    <app-card>
-      <app-header title="Support tickets" source="list.png" alt="a list of items"/>
-      <div id="status">
-        <p>Todo...</p>
-      </div>
-    </app-card>
+    <app-server-status [currentStatus]="currentStatus"/>
+    <app-traffic-monitor/>
+    <app-tickets/>
   </div>
 </main>
