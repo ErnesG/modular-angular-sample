@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+// extend built in components in angular, to avoid create double dom containers
 @Component({
-  selector: 'app-button',
+  selector: 'button[appButton]',
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
